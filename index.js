@@ -10,7 +10,7 @@ const client = new Client({
 client.on('qr', qr => {
     qrcode.toString(qr, {
         type: 'terminal',
-        width: 20,
+        width: 8,
         margin: 1
     }, (err, output) => {
         if (err) throw err;
