@@ -11,16 +11,16 @@ client.on('qr', qr => {
     // توليد QR بحجم أصغر
     qrcode.toString(qr, {
         type: 'terminal',
-        width: 10, // تحديد العرض هنا
+        width: 100, // تحديد العرض هنا
         margin: 1
     }, (err, output) => {
         if (err) throw err;
         console.log(output); // عرض QR في التيرمنال بحجم صغير
     });
-    console.log('امسح QR من واتساب');
+    console.log('From WhatsApp, scan the QR code');
 });
 
-client.on('ready', () => console.log('✅ البوت اشتغل بنجاح'));
+client.on('ready', () => console.log('✅ The bot worked successfully'));
 
 client.on('message', message => {
     const responses = {
