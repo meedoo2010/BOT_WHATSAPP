@@ -11,11 +11,11 @@ const client = new Client({
 
 client.on('qr', qr => {
     qrcode.generate(qr, { small: true });
-    console.log('امسح QR من واتساب');
+    console.log('From WhatsApp, scan the QR code');
 });
 
 client.on('ready', () => {
-    console.log('✅ البوت اشتغل بنجاح');
+    console.log('✅ The bot worked successfully');
 });
 
 client.on('message', message => {
