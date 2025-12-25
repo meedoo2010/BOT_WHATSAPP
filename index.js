@@ -11,11 +11,11 @@ const client = new Client({
 
 client.on('qr', qr => {
     qrcode.generate(qr, { small: true });
-    console.log('امسح QR من واتساب');
+    console.log('From WhatsApp, scan the QR code');
 });
 
 client.on('ready', () => {
-    console.log('✅ البوت اشتغل بنجاح');
+    console.log('✅ The bot worked successfully');
 });
 
 client.on('message', message => {
@@ -24,15 +24,17 @@ client.on('message', message => {
     if (msg === 'مرحبا') {
         message.reply('أهلاً بيك 👋');
     }
+
     else if (msg === 'سعر') {
         message.reply('تبدأ من 300 جنيه API ,أسعار مواقع تبدأ من 200 جنيه, التطبيقات تبدأ من 150 جنيه 💰');
     }
+
     else if (msg === 'سلام') {
         message.reply('مع السلامة ❤️');
-    }
-    else {
-        message.reply('سيتم التواصل معك في اقرب وقت 🕟');
+    
+    else {message.reply('سيتم التواصل معك في اقرب وقت 🕟');}
     }
 });
 
+client.initialize();
 client.initialize();
